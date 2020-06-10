@@ -18,6 +18,6 @@ namespace JobBoard.Client.Models
         public DateTime CreatedAt { get; set; }
         [DataType(DataType.Date), DisplayFormat(DataFormatString = @"{0:dd\/MM\/yyyy }",
             ApplyFormatInEditMode = true)]
-        public DateTime? ExpiresAt { get; set; }
+        public DateTime? ExpiresAt { get; set; } 
     }
 }

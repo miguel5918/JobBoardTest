@@ -27,17 +27,19 @@
     </div>
     <div class="form-group">
         <Label>Created At</Label>
-        <div class="editor-field col-md-6"> @Html.TextBoxFor(x => x.CreatedAt, new { @class = "form-control col-4" })</div>
+        <div class="col-md-6"> @Html.EditorFor(x => x.CreatedAt, new { @class = "form-control col-5" })</div>
         @Html.ValidationMessageFor(x => x.CreatedAt)
     </div>
+    <br />
     <div class="form-group">
         <Label>Expires At</Label>
-        <div class=" editor-field col-md-6">
-            @Html.TextBoxFor(x => x.ExpiresAt, new { @class = "form-control col-4 " })
+        <div class="col-md-6">
+            @Html.EditorFor(x => x.ExpiresAt, new { @class = "form-control col-5 " })
         </div>
     </div>
+   <br />
     <div class="form-group">
-        <a href="@Url.Action("Index","Job")" class="col-4 ali"> Back</a>
+        <a href="@Url.Action("Index","Job")" class="col-4 "> Back</a>
         <input type="submit" class="btn btn-success " value="Save" />
 
     </div>
