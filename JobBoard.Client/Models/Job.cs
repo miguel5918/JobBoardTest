@@ -12,10 +12,12 @@ namespace JobBoard.Client.Models
         [Required(ErrorMessage = "Field Job is Required")]
         public string JobName { get; set; }
         public string Description { get; set; }
-        [DataType(DataType.Date)]
+       [DataType(DataType.Date), DisplayFormat(DataFormatString = @"{0:dd\/MM\/yyyy }",
+            ApplyFormatInEditMode = true)]
         [Required(ErrorMessage = "Field  is Required")]
         public DateTime CreatedAt { get; set; }
-        [DataType(DataType.Date)]
+        [DataType(DataType.Date), DisplayFormat(DataFormatString = @"{0:dd\/MM\/yyyy }",
+            ApplyFormatInEditMode = true)]
         public DateTime? ExpiresAt { get; set; }
     }
 }
