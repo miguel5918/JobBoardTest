@@ -19,10 +19,10 @@ namespace JobBoard.Client.Controllers
             {
                 //Invoke REST APi for Get
                 HttpClient clientHttp = new HttpClient();
-                clientHttp.BaseAddress = new Uri("https://localhost:44387/");
+                clientHttp.BaseAddress = new Uri("https://localhost:44331/");
 
 
-                var request = clientHttp.GetAsync("Job").Result;
+                var request = clientHttp.GetAsync("api/Job").Result;
 
                 if (request.IsSuccessStatusCode)
                 {
@@ -57,7 +57,7 @@ namespace JobBoard.Client.Controllers
                     clientHttp.BaseAddress = new Uri("https://localhost:44387/");
 
 
-                    var request = clientHttp.PostAsync("Job", job, new JsonMediaTypeFormatter()).Result;
+                    var request = clientHttp.PostAsync("api/Job", job, new JsonMediaTypeFormatter()).Result;
 
                     if (request.IsSuccessStatusCode)
                     {
@@ -90,7 +90,7 @@ namespace JobBoard.Client.Controllers
                 clientHttp.BaseAddress = new Uri("https://localhost:44387/");
 
 
-                var request = clientHttp.GetAsync("Job/" + id).Result;
+                var request = clientHttp.GetAsync("api/Job/" + id).Result;
 
                 if (request.IsSuccessStatusCode)
                 {
@@ -119,7 +119,7 @@ namespace JobBoard.Client.Controllers
                     clientHttp.BaseAddress = new Uri("https://localhost:44387/");
 
 
-                    var request = clientHttp.PutAsync("Job", job, new JsonMediaTypeFormatter()).Result;
+                    var request = clientHttp.PutAsync("api/Job", job, new JsonMediaTypeFormatter()).Result;
 
                     if (request.IsSuccessStatusCode)
                     {
@@ -154,7 +154,7 @@ namespace JobBoard.Client.Controllers
                 clientHttp.BaseAddress = new Uri("https://localhost:44387/");
 
 
-                var request = clientHttp.DeleteAsync("Job/" + id).Result;
+                var request = clientHttp.DeleteAsync("api/Job/" + id).Result;
 
                 if (request.IsSuccessStatusCode)
                 {
@@ -186,7 +186,7 @@ namespace JobBoard.Client.Controllers
                 clientHttp.BaseAddress = new Uri("https://localhost:44387/");
 
 
-                var request = clientHttp.GetAsync("Job/" + id).Result;
+                var request = clientHttp.GetAsync("api/Job/" + id).Result;
 
                 if (request.IsSuccessStatusCode)
                 {
