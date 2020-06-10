@@ -1,7 +1,51 @@
-﻿
+﻿@model Job
 @{
     ViewBag.Title = "New";
 }
 
-<h2>New</h2>
+<h3>New</h3>
 
+@using (Html.BeginForm("New", "Job", FormMethod.Post))
+{
+    @Html.AntiForgeryToken();
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+    <div class="form-group">
+        <Label>Id</Label>
+        @Html.TextBoxFor(x => x.Id, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Id)
+    </div>
+    <div class="form-group">
+        <Label>Job</Label>
+        @Html.TextBoxFor(x => x.JobName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.JobName, "", new { @class = "text-danger" })
+
+    </div>
+    <div class="form-group">
+        <Label>Description</Label>
+        @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <Label>Created At</Label>
+        <div class="col-md-6"> @Html.EditorFor(x => x.CreatedAt, new { @class = "form-control col-4" })</div>
+        @Html.ValidationMessageFor(x => x.CreatedAt, "", new { @class = "text-danger" })
+
+
+    </div>
+    <div class="form-group ">
+        <Label>Expires At</Label>
+        <div class="col-md-6">
+            @Html.EditorFor(x => x.ExpiresAt, new { @class = "form-control col-4 " })
+        </div>
+    </div>
+    <div class="form-group">
+        <a href="@Url.Action("Index","Job")" class="col-4"> Back</a>
+        <input type="submit" class="btn btn-success " value="Save" />
+
+    </div>
+    <div class="form-horizontal">
+
+
+    </div>
+}

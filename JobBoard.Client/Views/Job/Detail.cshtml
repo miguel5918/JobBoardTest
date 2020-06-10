@@ -1,7 +1,37 @@
-﻿
+﻿@model Job
 @{
     ViewBag.Title = "Detail";
 }
 
-<h2>Detail</h2>
+<h3>Detail</h3>
 
+<div class="form-group">
+    <Label>Id</Label>
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control", @readonly = "readonly" })
+
+</div>
+<div class="form-group">
+    <Label>Job</Label>
+    @Html.TextBoxFor(x => x.JobName, new { @class = "form-control" })
+
+</div>
+<div class="form-group">
+    <Label>Description</Label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+</div>
+<div class="form-group">
+    <Label>Created At</Label>
+    @Html.TextBoxFor(x => x.CreatedAt, new { @class = "form-control", @readonly = "readonly" })
+
+</div>
+<div class="form-group">
+    <Label>Expires At</Label>
+
+    @Html.TextBoxFor(x => x.ExpiresAt, new { @class = "form-control", @readonly = "readonly" })
+
+</div>
+<div class="form-group">
+    <a href="@Url.Action("Index","Job")"> Back</a>
+
+
+</div>

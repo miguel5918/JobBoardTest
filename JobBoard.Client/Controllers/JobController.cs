@@ -54,7 +54,7 @@ namespace JobBoard.Client.Controllers
                 {
                     //Invoke REST APi for Post
                     HttpClient clientHttp = new HttpClient();
-                    clientHttp.BaseAddress = new Uri("https://localhost:44387/");
+                    clientHttp.BaseAddress = new Uri("https://localhost:44331/");
 
 
                     var request = clientHttp.PostAsync("api/Job", job, new JsonMediaTypeFormatter()).Result;
@@ -87,7 +87,7 @@ namespace JobBoard.Client.Controllers
             {
                 //Invoke REST APi for Post
                 HttpClient clientHttp = new HttpClient();
-                clientHttp.BaseAddress = new Uri("https://localhost:44387/");
+                clientHttp.BaseAddress = new Uri("https://localhost:44331/");
 
 
                 var request = clientHttp.GetAsync("api/Job/" + id).Result;
@@ -116,7 +116,7 @@ namespace JobBoard.Client.Controllers
                 {
                     //Invoke REST APi for Post
                     HttpClient clientHttp = new HttpClient();
-                    clientHttp.BaseAddress = new Uri("https://localhost:44387/");
+                    clientHttp.BaseAddress = new Uri("https://localhost:44331/");
 
 
                     var request = clientHttp.PutAsync("api/Job", job, new JsonMediaTypeFormatter()).Result;
@@ -151,7 +151,7 @@ namespace JobBoard.Client.Controllers
             {
                 //Invoke REST APi for Post
                 HttpClient clientHttp = new HttpClient();
-                clientHttp.BaseAddress = new Uri("https://localhost:44387/");
+                clientHttp.BaseAddress = new Uri("https://localhost:44331/");
 
 
                 var request = clientHttp.DeleteAsync("api/Job/" + id).Result;
@@ -183,7 +183,7 @@ namespace JobBoard.Client.Controllers
             {
                 //Invoke REST APi for Post
                 HttpClient clientHttp = new HttpClient();
-                clientHttp.BaseAddress = new Uri("https://localhost:44387/");
+                clientHttp.BaseAddress = new Uri("https://localhost:44331/");
 
 
                 var request = clientHttp.GetAsync("api/Job/" + id).Result;
